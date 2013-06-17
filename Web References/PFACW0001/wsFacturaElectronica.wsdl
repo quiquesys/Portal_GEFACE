@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://cdinet/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://cdinet/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://cdinet/">
+      <s:element name="PFACO0001">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fechaInicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaFinal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoDocumento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PFACO0001Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PFACO0001Result" type="tns:RespuestaGeneral" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RespuestaGeneral">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Respuesta" />
+          <s:element minOccurs="1" maxOccurs="1" name="Resultado" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistraDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCompania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNoDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEstadoDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pInventario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTipoDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaDocumento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistraDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistraDocumentoResult" type="tns:RespuestaGeneral" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistraLoteDocumentos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tipoDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoInventario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_inicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_fin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistraLoteDocumentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistraLoteDocumentosResult" type="tns:RespuestaGeneral" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PFACO0001SoapIn">
+    <wsdl:part name="parameters" element="tns:PFACO0001" />
+  </wsdl:message>
+  <wsdl:message name="PFACO0001SoapOut">
+    <wsdl:part name="parameters" element="tns:PFACO0001Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistraDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistraDocumento" />
+  </wsdl:message>
+  <wsdl:message name="RegistraDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistraDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistraLoteDocumentosSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistraLoteDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="RegistraLoteDocumentosSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistraLoteDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsFacturaElectronicaSoap">
+    <wsdl:operation name="PFACO0001">
+      <wsdl:input message="tns:PFACO0001SoapIn" />
+      <wsdl:output message="tns:PFACO0001SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistraDocumento">
+      <wsdl:input message="tns:RegistraDocumentoSoapIn" />
+      <wsdl:output message="tns:RegistraDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistraLoteDocumentos">
+      <wsdl:input message="tns:RegistraLoteDocumentosSoapIn" />
+      <wsdl:output message="tns:RegistraLoteDocumentosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsFacturaElectronicaSoap" type="tns:wsFacturaElectronicaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PFACO0001">
+      <soap:operation soapAction="http://cdinet/PFACO0001" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistraDocumento">
+      <soap:operation soapAction="http://cdinet/RegistraDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistraLoteDocumentos">
+      <soap:operation soapAction="http://cdinet/RegistraLoteDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsFacturaElectronicaSoap12" type="tns:wsFacturaElectronicaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PFACO0001">
+      <soap12:operation soapAction="http://cdinet/PFACO0001" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistraDocumento">
+      <soap12:operation soapAction="http://cdinet/RegistraDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistraLoteDocumentos">
+      <soap12:operation soapAction="http://cdinet/RegistraLoteDocumentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsFacturaElectronica">
+    <wsdl:port name="wsFacturaElectronicaSoap" binding="tns:wsFacturaElectronicaSoap">
+      <soap:address location="http://aape01/pfacw0001/wsFacturaElectronica.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsFacturaElectronicaSoap12" binding="tns:wsFacturaElectronicaSoap12">
+      <soap12:address location="http://aape01/pfacw0001/wsFacturaElectronica.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

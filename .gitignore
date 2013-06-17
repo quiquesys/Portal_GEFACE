@@ -88,6 +88,12 @@ csx
 # Windows Store app package directory
 AppPackages/
 
+# Reportes, constancias y bd
+constancia/*.pdf
+reporte/*.xls
+App_Data/*.*
+
+
 # Others
 [Bb]in
 [Oo]bj

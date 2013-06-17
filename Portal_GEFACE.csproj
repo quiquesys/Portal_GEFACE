@@ -1,0 +1,396 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F300B7EC-D2EC-4616-8221-0B1CC1290AC9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Portal_GEFACE</RootNamespace>
+    <AssemblyName>Portal_GEFACE</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\dll\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="itextsharp, Version=5.3.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\dev\dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PGENL0001, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PGENL0001\bin\Release\PGENL0001.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\dcmegamenu.css" />
+    <Content Include="css\eggplant\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\eggplant\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="css\eggplant\images\ui-bg_flat_55_994d53_40x100.png" />
+    <Content Include="css\eggplant\images\ui-bg_flat_55_fafafa_40x100.png" />
+    <Content Include="css\eggplant\images\ui-bg_gloss-wave_30_3d3644_500x100.png" />
+    <Content Include="css\eggplant\images\ui-bg_highlight-soft_100_dcd9de_1x100.png" />
+    <Content Include="css\eggplant\images\ui-bg_highlight-soft_100_eae6ea_1x100.png" />
+    <Content Include="css\eggplant\images\ui-bg_highlight-soft_25_30273a_1x100.png" />
+    <Content Include="css\eggplant\images\ui-bg_highlight-soft_45_5f5964_1x100.png" />
+    <Content Include="css\eggplant\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\eggplant\images\ui-icons_734d99_256x240.png" />
+    <Content Include="css\eggplant\images\ui-icons_8d78a5_256x240.png" />
+    <Content Include="css\eggplant\images\ui-icons_a8a3ae_256x240.png" />
+    <Content Include="css\eggplant\images\ui-icons_ebccce_256x240.png" />
+    <Content Include="css\eggplant\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\eggplant\jquery-ui-1.8.18.custom.css" />
+    <Content Include="css\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="css\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="css\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="css\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="css\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="css\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="css\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="css\redmond\jquery-ui-1.8.20.custom.css" />
+    <Content Include="css\skins\black.css" />
+    <Content Include="css\skins\blue.css" />
+    <Content Include="css\skins\green.css" />
+    <Content Include="css\skins\grey.css" />
+    <Content Include="css\skins\images\arrow.png" />
+    <Content Include="css\skins\images\arrow_off.png" />
+    <Content Include="css\skins\images\arrow_on.png" />
+    <Content Include="css\skins\images\bg_black.png" />
+    <Content Include="css\skins\images\bg_blue.png" />
+    <Content Include="css\skins\images\bg_green.png" />
+    <Content Include="css\skins\images\bg_grey.png" />
+    <Content Include="css\skins\images\bg_light_blue.png" />
+    <Content Include="css\skins\images\bg_mega_hdr.png" />
+    <Content Include="css\skins\images\bg_mega_hdr_full.png" />
+    <Content Include="css\skins\images\bg_mega_hdr_on.png" />
+    <Content Include="css\skins\images\bg_orange.png" />
+    <Content Include="css\skins\images\bg_red.png" />
+    <Content Include="css\skins\images\bg_sub.png" />
+    <Content Include="css\skins\images\bg_sub_left.png" />
+    <Content Include="css\skins\images\bg_white.png" />
+    <Content Include="css\skins\light_blue.css" />
+    <Content Include="css\skins\orange.css" />
+    <Content Include="css\skins\red.css" />
+    <Content Include="css\skins\white.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="geface\Administracion.aspx" />
+    <Content Include="geface\Consulta.aspx" />
+    <Content Include="geface\Documento.aspx" />
+    <Content Include="geface\Factura.aspx" />
+    <Content Include="geface\Login.aspx" />
+    <Content Include="geface\Lote.aspx" />
+    <Content Include="geface\SinPermiso.aspx" />
+    <Content Include="img\admin.jpg" />
+    <Content Include="img\ajax-loader.gif" />
+    <Content Include="img\ajax-spin.gif" />
+    <Content Include="img\ajax-spinner.gif" />
+    <Content Include="img\cofiño_stahl.jpg" />
+    <Content Include="img\facs.jpg" />
+    <Content Include="img\facturas.jpg" />
+    <Content Include="img\gradient_light.jpg" />
+    <Content Include="img\img1hd.jpg" />
+    <Content Include="img\img2hd.jpg" />
+    <Content Include="img\img3hd.jpg" />
+    <Content Include="img\img_reporte.png" />
+    <Content Include="img\Lock.png" />
+    <Content Include="img\logo_cs.png" />
+    <Content Include="img\overlay.png" />
+    <Content Include="img\pdf.png" />
+    <Content Include="img\pdf_disabled.png" />
+    <Content Include="img\search.jpg" />
+    <Content Include="img\xcel.png" />
+    <Content Include="img\xcel_disabled.png" />
+    <Content Include="jquery.scrollTo-1.4.2\changes.txt" />
+    <Content Include="jquery.scrollTo-1.4.2\jquery.scrollTo-min.js" />
+    <Content Include="jquery.scrollTo-1.4.2\jquery.scrollTo.js" />
+    <Content Include="js\jquery-1.7.1.min.js" />
+    <Content Include="js\jquery-ui-1.8.18.custom.min.js" />
+    <Content Include="js\jquery.dcmegamenu.1.3.3.js" />
+    <Content Include="js\jquery.dcmegamenu.1.3.3.min.js" />
+    <Content Include="js\jquery.hoverIntent.minified.js" />
+    <Content Include="js\jquery.ui.datepicker-es.js" />
+    <Content Include="js\PreventDoubleClick.js" />
+    <Content Include="js\script.js" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CDIProvider\MembershipService.disco" />
+    <None Include="Web References\CDIProvider\MembershipService.wsdl" />
+    <None Include="Web References\CDIProvider\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ifacere\clsResponseGeneral.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ifacere\clsResponseLote.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ifacere\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ifacere\sso_wsefactura.wsdl" />
+    <None Include="Web References\PFACW0001\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PFACW0001\RespuestaGeneral.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PFACW0001\wsFacturaElectronica.wsdl" />
+    <None Include="Web References\RoleService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RoleService\RoleService.disco" />
+    <None Include="Web References\RoleService\RoleService.wsdl" />
+    <None Include="Web References\ifacere\sso_wsefactura.disco" />
+    <None Include="Web References\PFACW0001\wsFacturaElectronica.disco" />
+    <None Include="Resources\cofiño stahl.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geface\Administracion.aspx.cs">
+      <DependentUpon>Administracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geface\Administracion.aspx.designer.cs">
+      <DependentUpon>Administracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geface\Consulta.aspx.cs">
+      <DependentUpon>Consulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geface\Consulta.aspx.designer.cs">
+      <DependentUpon>Consulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geface\Documento.aspx.cs">
+      <DependentUpon>Documento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geface\Documento.aspx.designer.cs">
+      <DependentUpon>Documento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geface\Factura.aspx.cs">
+      <DependentUpon>Factura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geface\Factura.aspx.designer.cs">
+      <DependentUpon>Factura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geface\GeneraExcell.cs" />
+    <Compile Include="geface\Informacion.cs" />
+    <Compile Include="geface\itsEvents.cs" />
+    <Compile Include="geface\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geface\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geface\Lote.aspx.cs">
+      <DependentUpon>Lote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geface\Lote.aspx.designer.cs">
+      <DependentUpon>Lote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geface\SinPermiso.aspx.cs">
+      <DependentUpon>SinPermiso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geface\SinPermiso.aspx.designer.cs">
+      <DependentUpon>SinPermiso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneraPDF.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="querys.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>querys.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CDIProvider\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ifacere\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PFACW0001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\RoleService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://aape01/pfacw0001/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PFACW0001\</RelPath>
+      <UpdateFromURL>http://aape01/pfacw0001/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Portal_GEFACE_PFACW0001_wsFacturaElectronica</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://aape01/wsiflocaltest/sso_wsefactura.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ifacere\</RelPath>
+      <UpdateFromURL>http://aape01/wsiflocaltest/sso_wsefactura.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Portal_GEFACE_ifacere_SSO_wsEFactura</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://aapi01/cdiprovider/MembershipService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CDIProvider\</RelPath>
+      <UpdateFromURL>http://aapi01/cdiprovider/MembershipService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Portal_GEFACE_CDIProvider_MembershipService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://aapi01/cdiprovider/RoleService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RoleService\</RelPath>
+      <UpdateFromURL>http://aapi01/cdiprovider/RoleService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Portal_GEFACE_RoleService_RoleService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="querys.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>querys.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="constancia\" />
+    <Folder Include="img\_notes\" />
+    <Folder Include="jquery.scrollTo-1.4.2\_notes\" />
+    <Folder Include="reporte\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53058</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

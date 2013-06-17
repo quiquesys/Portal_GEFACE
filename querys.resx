@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Companias" xml:space="preserve">
+    <value>select gcicod as codigo, gcinoc as nombre from intgen.fgen001
+where gcicod in (select distinct(gcicod) from cdifac.tfac046) and gcicod in ( select distinct(scicod) from intsec.fsec001 where suscod = '{0}')</value>
+    <comment>Obtiene las compañias a trabajar en EFACE</comment>
+  </data>
+  <data name="Empresa_PDF" xml:space="preserve">
+    <value>select IdEmpresa as codigo, Descripcion as nombre from SSO_SEG_EMPRESA</value>
+    <comment>Obtiene las Empresas de IFACERE</comment>
+  </data>
+  <data name="FacturaSerie_PDF" xml:space="preserve">
+    <value>select distinct(IdSerie) as codigo, IdSerie as nombre from SSO_GFC_FAC_SERIE where IdEmpresa = {0} and IdSucursal = {1}</value>
+    <comment>Obtiene las Series de IFACERE</comment>
+  </data>
+  <data name="NotaCreditoSerie_PDF" xml:space="preserve">
+    <value>select distinct(IdSerie) as codigo, IdSerie as nombre from SSO_GFC_NC_SERIE where IdEmpresa = {0} and IdSucursal = {1}</value>
+    <comment>Obtiene las Sereies de IFACERE</comment>
+  </data>
+  <data name="Sucursal_PDF" xml:space="preserve">
+    <value>select IdSucursal as codigo, Descripcion as nombre from SSO_SEG_SUCURSAL where IdEmpresa = {0}</value>
+    <comment>Obtiene las Sucursales de IFACERE</comment>
+  </data>
+  <data name="TipoDocumentos" xml:space="preserve">
+    <value>select ftifac as tipo, fnotif as nombre from cdifac.tfac044 where gcicod = '{0}'
+order by fnotif asc</value>
+    <comment>Obtiene los tipos de documentos por Empresa</comment>
+  </data>
+  <data name="TipoDoc_PDF" xml:space="preserve">
+    <value>select IdTipoDocumento as tipo, Descripcion as nombre from SSO_IFL_TIPODOCUMENTO where IdTipoDocumento in (1,2)</value>
+    <comment>Obtiene los tipos de documentos de IFACERE</comment>
+  </data>
+  <data name="BalanceFacturas_Suc" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, SUM(f.descuento) as Descuento, SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA_EFACE, COUNT(d.NoDocumento) as cantidad 
+from SSO_GFC_FAC_FACTURA f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo
+where f.IdSerie = d.Serie
+and f.NoFactura = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa and d.EstadoDocumento &lt;&gt; 'A' 
+and convert(Char(10),f.FechaEmision, 103) = '{0}' and d.IdEmpresa = {1} and d.IdSucursal = {2} 
+and d.IdTipoDocumento = 4
+group by emp.Descripcion, tipo.Descripcion</value>
+    <comment>Devuelve Balance de Valores por Sucursal</comment>
+  </data>
+  <data name="BalanceFacturas_Total" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, SUM(f.descuento) as Descuento, SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA_EFACE, COUNT(d.NoDocumento) as cantidad, '' as vcantidad, '' as viva, '' as vtotal
+from SSO_GFC_FAC_FACTURA f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo
+where f.IdSerie = d.Serie
+and f.NoFactura = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa and d.EstadoDocumento &lt;&gt; 'A' 
+and convert(Char(10), f.FechaEmision, 103) = '{0}' and d.IdEmpresa = {1} 
+and d.IdTipoDocumento = 4 
+group by emp.Descripcion, tipo.Descripcion</value>
+    <comment>Devuelve Balance de Valores para Todas las Sucursales</comment>
+  </data>
+  <data name="BalanceNotaCredito_Suc" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA_EFACE, COUNT(d.NoDocumento) as cantidad 
+from SSO_GFC_NC_NOTACREDITO f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo
+where f.IdSerie = d.Serie
+and f.NoNotaCredito = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa and d.EstadoDocumento &lt;&gt; 'A' 
+and convert(Char(10), f.FechaEmision, 103) = '{0}' and d.IdEmpresa = {1} and d.IdSucursal = {2} 
+and d.IdTipoDocumento = 5
+group by emp.Descripcion, tipo.Descripcion</value>
+    <comment>Devuelve Balance de Notas de Credito por Sucursal</comment>
+  </data>
+  <data name="BalanceNotaCredito_Total" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA_EFACE, COUNT(d.NoDocumento) as cantidad 
+from SSO_GFC_NC_NOTACREDITO f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo
+where f.IdSerie = d.Serie
+and f.NoNotaCredito = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa and d.EstadoDocumento &lt;&gt; 'A' 
+and convert(Char(10), f.FechaEmision, 103) = '{0}' and d.IdEmpresa = {1} 
+and d.IdTipoDocumento = 5
+group by emp.Descripcion, tipo.Descripcion</value>
+    <comment>Devuelve Balance de Notas de Notas de Credito para todas las Sucursales</comment>
+  </data>
+  <data name="Companias_EFACE_AS400" xml:space="preserve">
+    <value>select t.fcisat as codigo, f.gcinoc as nombre from intgen.fgen001 f inner join (select distinct(gcicod) as gcicod, fcisat from cdifac.tfac046) t
+on f.gcicod = t.gcicod inner join  (select distinct(scicod) from intsec.fsec001 where suscod = '{0}') fs
+on f.gcicod = fs.scicod</value>
+    <comment>Obtiene las compañias con el codigo de EFACE</comment>
+  </data>
+  <data name="SeriesDocumento" xml:space="preserve">
+    <value>select fsrdoc as serie from cdifac.tfac049 where gcicod = '{0}' and ftifac = '{1}'</value>
+    <comment>Obtiene las series por tipo de documento y compañia</comment>
+  </data>
+  <data name="TipoDoc_fac" xml:space="preserve">
+    <value>select ftifac as tipo, fnotif as nombre from cdifac.tfac044 where gcicod = '{0}'
+and fnotif like 'FAC%' order by fnotif asc</value>
+    <comment>Obtiene los tipos de Facturas</comment>
+  </data>
+  <data name="TipoDoc_nc" xml:space="preserve">
+    <value>select ftifac as tipo, fnotif as nombre from cdifac.tfac044 where gcicod = '{0}'
+and fnotif like 'NOT%' order by fnotif asc</value>
+    <comment>Obtiene los tipos de Notas de Credito</comment>
+  </data>
+  <data name="DetalleFacturas_Resumen" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, 
+SUM(f.descuento) as Descuento, SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA, 
+COUNT(d.NoDocumento) as cantidad, suc.Descripcion as sucursal
+from SSO_GFC_FAC_FACTURA f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo,
+SSO_SEG_SUCURSAL suc
+where f.IdSerie = d.Serie
+and f.NoFactura = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa 
+and d.IdEmpresa = suc.IdEmpresa
+and d.IdSucursal = suc.IdSucursal
+and d.EstadoDocumento &lt;&gt; 'A'
+and  convert(Char(10), f.FechaEmision, 103) = '{0}' and d.IdEmpresa = {1} 
+and d.IdTipoDocumento = 4 
+group by emp.Descripcion, tipo.Descripcion, suc.Descripcion</value>
+    <comment>Obtiene el Detalle por Sucursal en Facturas</comment>
+  </data>
+  <data name="DetalleNotas_Resumen" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, 
+SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA, COUNT(d.NoDocumento) as cantidad, suc.Descripcion as sucursal 
+from SSO_GFC_NC_NOTACREDITO f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, 
+SSO_IFL_TIPODOCUMENTO tipo, SSO_SEG_SUCURSAL suc
+where f.IdSerie = d.Serie
+and f.NoNotaCredito = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = suc.IdEmpresa
+and d.IdSucursal = suc.IdSucursal
+and d.IdEmpresa = emp.IdEmpresa and d.EstadoDocumento &lt;&gt; 'A'
+and convert(Char(10), f.FechaEmision, 103) = '{0}' and d.IdEmpresa = {1}  and d.IdTipoDocumento = 5
+group by emp.Descripcion, tipo.Descripcion, suc.Descripcion</value>
+    <comment>Obtiene el detalle de las Notas de Credito por Sucursal</comment>
+  </data>
+  <data name="BalanceMes_FC_Suc" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, SUM(f.descuento) as Descuento, SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA_EFACE, COUNT(d.NoDocumento) as cantidad 
+from SSO_GFC_FAC_FACTURA f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo
+where f.IdSerie = d.Serie
+and f.NoFactura = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa and d.EstadoDocumento &lt;&gt; 'A' 
+and month(f.FechaEmision) = {0} and year(f.FechaEmision) = {3} and d.IdEmpresa = {1} and d.IdSucursal = {2} 
+and d.IdTipoDocumento = 4
+group by emp.Descripcion, tipo.Descripcion</value>
+    <comment>Obtiene los totales de una Sucursal por mes en Facturas</comment>
+  </data>
+  <data name="BalanceMes_FC_Total" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, SUM(f.descuento) as Descuento, SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA_EFACE, COUNT(d.NoDocumento) as cantidad, '' as vcantidad, '' as viva, '' as vtotal
+from SSO_GFC_FAC_FACTURA f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo
+where f.IdSerie = d.Serie
+and f.NoFactura = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa and d.EstadoDocumento &lt;&gt; 'A' 
+and month(f.FechaEmision) =  {0} and year(f.FechaEmision) = {2} and d.IdEmpresa = {1} 
+and d.IdTipoDocumento = 4 and f.Resolucion=d.Resolucion 
+group by emp.Descripcion, tipo.Descripcion</value>
+    <comment>Obtiene el Total por mes de Facturas</comment>
+  </data>
+  <data name="BalanceMes_NC_Suc" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA_EFACE, COUNT(d.NoDocumento) as cantidad 
+from SSO_GFC_NC_NOTACREDITO f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo
+where f.IdSerie = d.Serie
+and f.NoNotaCredito = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa and d.EstadoDocumento &lt;&gt; 'A' 
+and month(f.FechaEmision) =  {0} and year(f.FechaEmision) = {3} and d.IdEmpresa = {1} and d.IdSucursal = {2} 
+and d.IdTipoDocumento = 5
+group by emp.Descripcion, tipo.Descripcion</value>
+    <comment>Obtiene los Totales por mes de Facturas</comment>
+  </data>
+  <data name="BalanceMes_NC_Total" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA_EFACE, COUNT(d.NoDocumento) as cantidad, '' as vcantidad, '' as viva, '' as vtotal
+from SSO_GFC_NC_NOTACREDITO f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo
+where f.IdSerie = d.Serie
+and f.NoNotaCredito = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa and d.EstadoDocumento &lt;&gt; 'A' 
+and month(f.FechaEmision) =  {0} and year(f.FechaEmision) = {2} and d.IdEmpresa = {1} 
+and d.IdTipoDocumento = 5 and f.Resolucion=d.Resolucion 
+group by emp.Descripcion, tipo.Descripcion</value>
+    <comment>Obtiene los Totales por mes de una Sucursal de Notas de Credito</comment>
+  </data>
+  <data name="DetalleMes_FC" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, 
+SUM(f.descuento) as Descuento, SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA, 
+COUNT(d.NoDocumento) as cantidad, suc.Descripcion as sucursal
+from SSO_GFC_FAC_FACTURA f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo,
+SSO_SEG_SUCURSAL suc
+where f.IdSerie = d.Serie
+and f.NoFactura = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa 
+and d.IdEmpresa = suc.IdEmpresa
+and d.IdSucursal = suc.IdSucursal
+and d.EstadoDocumento &lt;&gt; 'A'
+and month(f.FechaEmision) = {0} and year(f.FechaEmision) = {2} and d.IdEmpresa = {1} 
+and d.IdTipoDocumento = 4 
+group by emp.Descripcion, tipo.Descripcion, suc.Descripcion</value>
+    <comment>Obtiene el detalle de total en sucursales por mes en Facturas</comment>
+  </data>
+  <data name="DetalleMes_NC" xml:space="preserve">
+    <value>select emp.Descripcion as Compania, tipo.Descripcion as Tipo_Doc, SUM(f.total) as Total, 
+SUM(f.Valorneto) as ValorNeto, SUM(f.iva) as IVA, COUNT(d.NoDocumento) as cantidad, suc.Descripcion as sucursal 
+from SSO_GFC_NC_NOTACREDITO f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, 
+SSO_IFL_TIPODOCUMENTO tipo, SSO_SEG_SUCURSAL suc
+where f.IdSerie = d.Serie
+and f.NoNotaCredito = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = suc.IdEmpresa
+and d.IdSucursal = suc.IdSucursal
+and d.IdEmpresa = emp.IdEmpresa and d.EstadoDocumento &lt;&gt; 'A'
+and month(f.FechaEmision) =  {0} and year(f.FechaEmision) = {2} and d.IdEmpresa = {1}  
+and d.IdTipoDocumento = 5
+group by emp.Descripcion, tipo.Descripcion, suc.Descripcion</value>
+    <comment>Obtiene el detalle por Sucursal de Notas de Credito por Mes</comment>
+  </data>
+  <data name="DetalleIva_Suc" xml:space="preserve">
+    <value>select abs(sum(gvtfac)) as vtotal, abs(sum(givfac)) as viva, abs(count(xnudoc)) as vcantidad from inttax.ltax001a where gcicod = '{0}'
+and gfsopr = '1'
+and gfdopr = '{1}'
+and gfmopr = '{2}'
+and gfaopr = '{3}'
+and gsucod in ({4})
+and xcotrn in ({5})
+and xflanu &lt;&gt; 'A'
+group by gcicod, gsucod</value>
+    <comment>Obtiene el total del IVA por Sucursal y fecha.</comment>
+  </data>
+  <data name="DetalleIva_Suc_Mes" xml:space="preserve">
+    <value>select coalesce(abs(sum(gvtfac)),'0.00') as vtotal , coalesce(abs(sum(givfac)),'0.00') as viva, coalesce(abs(count(xnudoc)),'0.00') as vcantidad
+from inttax.ltax001a a 
+where a.gcicod = '{0}'
+and a.gfsopr = '1'
+and a.gfmopr = '{1}'
+and a.gfaopr = '{2}'
+and a.gsucod in ({3})
+and a.xcotrn in ({4})
+and a.xflanu &lt;&gt; 'A'
+group by a.gcicod, a.gsucod</value>
+    <comment>Obtiene el total por sucursal y por mes</comment>
+  </data>
+  <data name="SucFAC_AS" xml:space="preserve">
+    <value>select gsucod, gcicod, fessat from cdifac.tfac046 where fcisat ='{0}' and fessat in ({1})</value>
+    <comment>Obtiene lista de sucursales de Facturas en AS400</comment>
+  </data>
+  <data name="SucFac_EFACE" xml:space="preserve">
+    <value>select distinct(IdSucursal) from SSO_GFC_FAC_SERIE where IdSerie in ({0}) and IdEmpresa ='{1}'</value>
+    <comment>Obtiene lista de sucursales de Facturas en EFACE</comment>
+  </data>
+  <data name="TotalIva_Todas" xml:space="preserve">
+    <value>select abs(sum(gvtfac)) as vtotal, abs(sum(givfac)) as viva, abs(count(xnudoc)) as vcantidad from inttax.ltax001a where gcicod = '{0}'
+and gfsopr = '1'
+and gfdopr = '{1}'
+and gfmopr = '{2}'
+and gfaopr = '{3}'
+and xcotrn in ({4})
+and xflanu &lt;&gt; 'A'
+group by gcicod</value>
+    <comment>Obtiene el total del IVA por fecha</comment>
+  </data>
+  <data name="TotalIva_Todas_Mes" xml:space="preserve">
+    <value>select abs(sum(gvtfac)) as vtotal, abs(sum(givfac)) as viva, abs(count(xnudoc)) as vcantidad from inttax.ltax001a where gcicod = '{0}'
+and gfsopr = '1'
+and gfmopr = '{1}'
+and gfaopr = '{2}'
+and xcotrn in ({3})
+and xflanu &lt;&gt; 'A' 
+group by gcicod</value>
+    <comment>Obtiene el total del IVA por Mes</comment>
+  </data>
+  <data name="CuadroEfaceFAC" xml:space="preserve">
+    <value>select DAY(f.FechaEmision) as dia,d.IdSucursal as sucursal, d.Serie + CAST(d.NoDocumento as varchar) as documento, f.iva, f.total, case d.EstadoDocumento when 'E' then ''
+else d.EstadoDocumento
+end as EstadoDocumento
+from SSO_GFC_FAC_FACTURA f, SSO_IFL_DOCUMENTO d, SSO_SEG_EMPRESA emp, SSO_IFL_TIPODOCUMENTO tipo
+where f.IdSerie = d.Serie
+and f.NoFactura = d.NoDocumento
+and d.IdTipoDocumento = tipo.IdTipoDocumento
+and d.IdEmpresa = emp.IdEmpresa
+and month(f.FechaEmision) = {0} and year(f.FechaEmision) = {1} and d.IdEmpresa = {2} 
+and d.IdTipoDocumento = {3} and DAY(f.FechaEmision) {4}  and d.IdSucursal {5} and f.Resolucion=d.Resolucion
+ order by dia,d.Serie, d.NoDocumento</value>
+    <comment>Obtiene el cuadro de facturas de ifacere para generar reporte de descuadre</comment>
+  </data>
+  <data name="CuadroVentas" xml:space="preserve">
+    <value>select gfdopr as dia, gsucod as sucursal, xnudoc as documento, abs(givfac) as iva, abs(gvtfac) total, xflanu as estado
+from inttax.ltax001a 
+where gcicod = '{0}'
+and gfsopr = '1'
+and gfmopr = '{1}'
+and gfaopr = '{2}' 
+and xcotrn in ({3}) and gfdopr {4} and gsucod {5}
+order by gfdopr, xnudoc</value>
+    <comment>Obtiene el cuadro de facturas de ventas para generar reporte de descuadre</comment>
+  </data>
+  <data name="Series" xml:space="preserve">
+    <value>SELECT DISTINCT(IdSerie) AS SERIE FROM SSO_GFC_NC_SERIE
+UNION
+select DISTINCT(IdSerie) as SERIE from SSO_GFC_FAC_SERIE ORDER BY SERIE DESC</value>
+  </data>
+  <data name="CuadroEfaceNC" xml:space="preserve">
+    <value>select DAY(f.FechaEmision) as dia,d.IdSucursal as sucursal, d.Serie + CAST(d.NoDocumento as varchar) as documento, f.iva, f.total, case d.EstadoDocumento when 'E' then ''
+else d.EstadoDocumento end as EstadoDocumento
+from SSO_IFL_DOCUMENTO d   left join SSO_GFC_NC_NOTACREDITO f
+on f.IdSerie = d.Serie and f.NoNotaCredito = d.NoDocumento and month(f.FechaEmision)=month(d.FechaDocumento) and year(f.FechaEmision)=year(d.FechaDocumento) and f.Resolucion=d.Resolucion inner join SSO_SEG_EMPRESA emp
+on d.IdEmpresa = emp.IdEmpresa inner join SSO_IFL_TIPODOCUMENTO tipo
+on d.IdTipoDocumento = tipo.IdTipoDocumento
+where month(f.FechaEmision) = {0} and year(f.FechaEmision) = {1} and d.IdEmpresa = {2}
+and d.IdTipoDocumento = {3} and DAY(f.FechaEmision) {4} and d.IdSucursal {5} and f.Resolucion=d.Resolucion
+order by dia,d.Serie, d.NoDocumento</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cofiño_stahl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\cofiño stahl.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NombreUsuario" xml:space="preserve">
+    <value>SELECT f.NEMNOM FROM INTNOM.FNOM025 f INNER JOIN cdinom.cnom025 c
+on f.gcicod=c.GCICOD and f.nemcod=c.NEMCOD
+where c.ncousr=upper('{0}')</value>
+    <comment>Obtiene el nombre del usuario</comment>
+  </data>
+  <data name="FaltaCaja" xml:space="preserve">
+    <value>select 
+trim(fac.gnufac) as DOCUMENTO,  
+  fac.gfrimp as CORRELATIVO , 
+  caja.fsrfac as CAJA
+  from cdifac.tfac051 fac left join intfac.ffac007 caja 
+  on fac.gcicod=caja.gcicod and fac.gfrimp=caja.fcoprt
+  where fac.gfancr='{0}' and fac.gcicod='{1}' and (caja.fsrfac ='' OR CAJA.FSRFAC IS NULL)</value>
+  </data>
+  <data name="FaltaDetalle" xml:space="preserve">
+    <value>select CASE (gfancr) WHEN '1' THEN 'FACTURA' WHEN '2' THEN 'NOTA DE CREDITO' END AS TIPO,gnufac as DOCUMENTO, (GFDFAC||'-'||GFMFAC||'-'||GFAFAC) as fecha from cdifac.tfac051 where gnufac not in(
+		select distinct(gnufac) as gnufac from cdifac.tfac052) ORDER BY GFANCR</value>
+  </data>
+  <data name="LoteTotalCofal" xml:space="preserve">
+    <value>select n.* from (SELECT cta.anudoc AS documento
+FROM intcta.fcta006 cta inner join vhl.vhlfc2 aut 
+on aut.vnufav=cta.anudoc and aut.vtiopr=atiopr
+where
+aut.vtidoc&lt;&gt;'9' and aut.vtiopr='1' and aut.vcocio='CS'
+and (cta.afddoc between '01' and '28' ) 
+and (cta.afmdoc between '02' and '02' ) 
+and (cta.afadoc between '13' and '13' ) 
+group by cta.anudoc,cta.afddoc,cta.afmdoc,cta.afadoc,aut.vstfc1 order by documento) n
+UNION all
+select u.* from (SELECT cta.anudoc AS documento
+FROM intcta.fcta006 cta inner join cdivus.vusfc2 aut 
+on aut.vnufav=cta.anudoc
+where
+aut.vtidoc&lt;&gt;'8' and aut.vtiopr='1' and trim(aut.vcocia)='AM' and substr(trim(aut.vnufav),0,2) = 'U'
+and (cta.afddoc between '01' and '28' ) 
+and (cta.afmdoc between '02' and '02' ) 
+and (cta.afadoc between '13' and '13' ) 
+group by cta.anudoc,cta.afddoc,cta.afmdoc,cta.afadoc,aut.vstfc1 order by documento) u
+UNION ALL
+select o.* from (select 
+ofi.vdofyn AS documento
+from vhl.vhlfyn ofi 
+where ofi.vcoeim='CS' and ofi.vplfyn&lt;&gt;'VEH' and ofi.vtifyn='FAC'
+and (ofi.vfdfyn between '01' and '28')
+and (ofi.vfmfyn between '02' and '02')
+and (ofi.vfafyn between '13' and '13') order by documento asc) o
+UNION ALL
+select t.* from (select trim(gnufac) as documento from cdifac.tfac051
+where gfancr='1' and gcicod='CS' 
+and (gfdfac between '01' and '28')
+and (gfmfac between '02' and '02')
+and (gfafac between '13' and '13') order by documento asc) t</value>
+  </data>
+</root>

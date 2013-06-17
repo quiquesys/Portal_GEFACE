@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://aapi01/cdiprovider/RoleService.asmx?wsdl" docRef="http://aapi01/cdiprovider/RoleService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://aapi01/cdiprovider/RoleService.asmx" xmlns:q1="http://CDI/Services/" binding="q1:RoleServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://aapi01/cdiprovider/RoleService.asmx" xmlns:q2="http://CDI/Services/" binding="q2:RoleServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

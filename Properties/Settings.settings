@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Portal_GEFACE.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Portal_GEFACE_CDIProvider_MembershipService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://aapi01/cdiprovider/MembershipService.asmx</Value>
+    </Setting>
+    <Setting Name="Portal_GEFACE_RoleService_RoleService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://aapi01/cdiprovider/RoleService.asmx</Value>
+    </Setting>
+    <Setting Name="Portal_GEFACE_ifacere_SSO_wsEFactura" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://aape01/wsiflocaltest/sso_wsefactura.asmx</Value>
+    </Setting>
+    <Setting Name="Portal_GEFACE_PFACW0001_wsFacturaElectronica" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://aape01/pfacw0001/wsFacturaElectronica.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
